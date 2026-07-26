@@ -105,10 +105,11 @@
 						</goals>
 						<configuration>
 							<annotationProcessorPaths>
-								<path>
-									<groupId>org.projectlombok</groupId>
-									<artifactId>lombok</artifactId>
-								</path>
+                                <path>
+                                    <groupId>org.projectlombok</groupId>
+                                    <artifactId>lombok</artifactId>
+                                    <version>1.18.46</version>
+                                </path>
 							</annotationProcessorPaths>
 						</configuration>
 					</execution>
@@ -120,10 +121,11 @@
 						</goals>
 						<configuration>
 							<annotationProcessorPaths>
-								<path>
-									<groupId>org.projectlombok</groupId>
-									<artifactId>lombok</artifactId>
-								</path>
+                                <path>
+                                    <groupId>org.projectlombok</groupId>
+                                    <artifactId>lombok</artifactId>
+                                    <version>1.18.46</version>
+                                </path>
 							</annotationProcessorPaths>
 						</configuration>
 					</execution>

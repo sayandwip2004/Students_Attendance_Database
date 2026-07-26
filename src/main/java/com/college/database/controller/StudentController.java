@@ -8,8 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -36,15 +38,15 @@ public class StudentController {
         Pageable pageable = PageRequest.of(page, size);
         return studentService.searchStudents(search, pageable);
     }
-    @GetMapping("/searchstudent/{roll}")
+    @GetMapping("/search_student/{roll}")
     public StudentResponse response(@PathVariable String roll){
         Student student = studentRepo.findByRollNumber(roll);
 
         if (student == null) {
-            throw new RuntimeException("Student not found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
         }
         return new StudentResponse(
-                student.getName(),
+                student.getEmail(),
                 student.getRollNumber(),
                 student.getClassName(),
                 student.getEmail()
