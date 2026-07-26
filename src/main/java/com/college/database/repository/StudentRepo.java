@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface StudentRepo extends JpaRepository<Student,Long> {
     boolean existsByRollNumber(String rollNumber);
 
-    Optional<Student> findByRollNumber(String rollNumber);
+    Student findByRollNumber(String rollNumber);
 
     Page<Student> findByNameContainingIgnoreCaseOrRollNumberContainingIgnoreCase(
             String name,

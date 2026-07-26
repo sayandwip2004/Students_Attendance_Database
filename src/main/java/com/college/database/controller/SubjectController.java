@@ -15,7 +15,7 @@ public class SubjectController {
     @Autowired
     SubjectRepo subjectRepo;
     @PostMapping("/add")
-    @PreAuthorize("hasRole('ADMIN')")
+//    @PreAuthorize("hasRole('ADMIN')")
     public String subject(@RequestBody Subject subject){
         subjectRepo.save(subject);
         return "ok";

@@ -5,6 +5,8 @@ import lombok.*;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.util.List;
+
 @Entity
 @Table(name = "students")
 @Getter
