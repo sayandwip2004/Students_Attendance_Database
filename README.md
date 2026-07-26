@@ -1,25 +1,23 @@
 ## 📖 Table of Contents
 
-- [Description](#-description)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Architecture Overview](#-architecture-overview)
-- [Database Schema Overview](#-database-schema-overview)
-- [Installation & Setup](#-installation--setup)
-- [Configuration](#-configuration)
-- [Running the Project](#-running-the-project)
-- [Contributing](#-contributing)
+- [Description](#description)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Architecture Overview](#architecture-overview)
+- [Database Schema Overview](#database-schema-overview)
+- [Installation & Setup](#installation-setup)
+- [Configuration](#configuration)
+- [Running the Project](#running-the-project)
+- [Contributing](#contributing)
 
-
-
+<a id="description"></a>
 ## 📝 Description
 
 The **College Attendance Management System** is a backend REST API built with **Spring Boot** that streamlines academic record-keeping for colleges and universities. It enables administrators to manage students, subjects, and teacher-subject assignments, while allowing teachers to mark and monitor attendance for the subjects they teach.
 
 The system enforces **role-based access control (RBAC)**, ensuring that sensitive operations (e.g., creating students or assigning subjects) are restricted to administrators, while teachers have scoped access to attendance-related operations for their own classes.
 
-
-
+<a id="features"></a>
 ## ✨ Features
 
 | Feature | Description |
@@ -35,8 +33,7 @@ The system enforces **role-based access control (RBAC)**, ensuring that sensitiv
 | 🌐 **RESTful APIs** | Clean, resource-oriented API design |
 | 🗄️ **PostgreSQL Integration** | Reliable relational data persistence |
 
-
-
+<a id="tech-stack"></a>
 ## 🛠️ Tech Stack
 
 <div align="center">
@@ -53,8 +50,7 @@ The system enforces **role-based access control (RBAC)**, ensuring that sensitiv
 
 </div>
 
-
-
+<a id="architecture-overview"></a>
 ## 🏗️ Architecture Overview
 
 The application follows a classic **layered (N-tier) architecture**, promoting separation of concerns and testability.
@@ -76,8 +72,7 @@ flowchart TD
 - **Security Layer** – Intercepts requests for authentication and role-based authorization.
 - **DTO/Validation Layer** – Ensures clean data contracts and enforces input validation.
 
-
-
+<a id="database-schema-overview"></a>
 ## 🗃️ Database Schema Overview
 
 The system is built around six core entities that model the academic relationships between users, students, subjects, and attendance.
@@ -139,7 +134,7 @@ erDiagram
 | `TeacherSubject` | Join entity mapping teachers to assigned subjects |
 | `Attendance` | Records daily attendance per student, per subject |
 
-
+<a id="installation-setup"></a>
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
@@ -152,8 +147,8 @@ erDiagram
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/college-attendance-management-system.git
-cd college-attendance-management-system
+git clone https://github.com/sayandwip2004/Students_Attendance_Database.git
+cd Students_Attendance_Database
 ```
 
 ### Create the Database
@@ -168,7 +163,7 @@ CREATE DATABASE attendance_db;
 mvn clean install
 ```
 
-
+<a id="configuration"></a>
 ## 🔧 Configuration
 
 Update `src/main/resources/application.properties` with your local database credentials:
@@ -185,7 +180,7 @@ app.jwt.secret=your_jwt_secret_key
 app.jwt.expiration-ms=86400000
 ```
 
-
+<a id="running-the-project"></a>
 ## ▶️ Running the Project
 
 ### Using Maven
@@ -207,6 +202,7 @@ The API will be available at:
 http://localhost:8080
 ```
 
+<a id="contributing"></a>
 ## 🤝 Contributing
 
 Contributions are welcome! To contribute:
