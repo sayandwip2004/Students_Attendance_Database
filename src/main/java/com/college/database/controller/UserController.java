@@ -41,16 +41,16 @@ public class UserController {
 
     @GetMapping("/find/{email}")
     @PreAuthorize("hasRole('ADMIN')")
-    public Boolean Details(@PathVariable String email,@RequestHeader("Authorization") String authHeader  ){
-        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-            return false;
-        }
-        String token = authHeader.substring(7);//expect bearer
-        if(jwtUtil.isTokenValid(token)){
+    public Boolean Details(@PathVariable String email){
+//        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+//            return false;
+//        }
+//        String token = authHeader.substring(7);//expect bearer
+//        if(jwtUtil.isTokenValid(token)){
             return userRepo.existsByEmail(email);
-        }
 
-        return false;
+
+//        return false;
 
     }
 
