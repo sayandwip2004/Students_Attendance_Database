@@ -57,9 +57,9 @@ The application follows a classic **layered (N-tier) architecture**, promoting s
 
 ```mermaid
 flowchart TD
-    A[Client / Postman / Frontend] -->|HTTP Request| B[Controller Layer]
+    A[Client/Postman/Frontend] -->|HTTP Request| B[Controller Layer]
     B --> C[Service Layer]
-    C --> D[Repository Layer - Spring Data JPA]
+    C --> D[Repository Layer JPA]
     D --> E[(PostgreSQL Database)]
     B -.-> F[Spring Security Filter Chain]
     F -.-> B
